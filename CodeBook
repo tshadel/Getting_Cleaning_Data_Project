@@ -1,0 +1,21 @@
+variables
+
+The dataset contains measurements made from the accelerometers from the Samsung Galaxy S smartphone. 
+All the measurements initially are designated as training data or test data. Variable names are given in features.txt
+We read in the data and merge the training and test data, as we aren't concerned with the distinction. 
+We use the names in features.txt to label each column of the data.
+We only want to keep measurements on the mean and standard deviation for each measurement. 
+Based on the information provided in features_info.txt, we learn that all measurements on the mean have "mean()" in the label,
+and all measurements on the standard deviation have "std()" in the label. 
+Based on this, we throw out all other columns in the data
+The activities are stored in separate files from the measured data. 
+We merge this into our data frame, adding a new column for the activity. 
+We also convert the integers representing each activity with descriptive activity names. 
+We get this mapping from activity_labels.txt.
+The subjects are stored in separate files from the measured data. 
+We merge this into our data frame, adding a new column for the subject.
+generate new dataset of averages
+
+We create a new tidy dataset which contains the average for each measurement we have kept, 
+for each activity and each subject. 
+As there are 6 activities and 30 subjects, this means that our new tidy dataset has 180 rows.
